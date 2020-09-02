@@ -1,0 +1,260 @@
+body, html {
+    font-family: 'Comic Sans MS';
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: rgb(60,60,60);
+    color: #dddddd;
+    min-height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    box-shadow: 0px 3px 5px #000000;
+    position: relative;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.header h1 {
+    margin-left: 60px;
+}
+
+.header span {
+    margin-right: 60px;
+    font-size: 40px;
+}
+
+.main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.filters {
+    width: 300px;
+    background-color: #638da3;
+    color: #fff;
+    height: 90vh;
+    position: relative;
+    box-shadow: 2px 0px 3px black;
+    padding: 20px;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-tabs label {
+    margin-top: 20px;
+}
+
+.filter {
+    margin-top: 10px;
+}
+
+.filter-buttons {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-button {
+    margin: 10px 0px;
+    box-shadow: 0px 2px 3px black;
+    background-color: #dddddd;
+    width: 70%;
+    border-radius: 3px;
+}
+
+.filter-button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.content {
+    width: 100%;
+    justify-content: center;
+}
+
+.table-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    padding: 3px;
+    border-top: 1px solid #bbbbbb;
+    font-size: 12px;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(200, 205, 255);
+}
+
+th {
+    background-color: #666666;
+    color: #fff;
+}
+
+.btn-tabs {
+    margin: 12px;
+    padding-left: 40px;
+}
+
+.btn {
+    border-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 20px;
+    box-shadow: 0px 2px 3px black;
+}
+
+.btn.case-add {
+    background-color: #5eb95e;
+}
+
+.btn.case-add:hover {
+    background-color: #87be87;
+}
+
+.btn.case-delete {
+    background-color: #b96464;
+}
+
+.btn.case-delete:hover {
+    background-color: #b87c7c;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal__block {
+    background-color: #fff;
+    padding: 0 60px 60px;
+    width: 600px;
+    margin: 30px;
+    position: relative;
+  }
+  .modal__header {
+    margin-bottom: 15px;
+  }
+  .modal__submit label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .modal__submit input {
+    margin-left: 15px;
+  }
+  .modal__btn-submit {
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+  }
+  .modal__btn-submit:disabled, .modal__btn-submit[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+  }
+  .modal__btn-block {
+    display: flex;
+    align-items: center;
+  }
+  .modal__description p {
+    margin-top: 10px;
+  }
+  .modal__file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  .modal__file-btn {
+    line-height: 2;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .modal__file-label {
+    display: block !important;
+  }
+  .modal__file-label:hover {
+    cursor: pointer;
+  }
+  .modal__file-label:hover span {
+    background-color: #BF3F4A;
+  }
+  .modal__close {
+    position: absolute;
+    top: 10px;
+    right: 21px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .modal__close:hover {
+    color: #009cf0;
+  }
+  .patient-fio {
+      min-width: 70%;
+  }
+
+.validation-wrapper {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    width: 20vw;
+    height: 100vh;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modal.hide, .validation-wrapper.hide {
+    display: none;
+  }
+
+.validation-item {
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 2px black;
+}
+
+.validation-item.error {
+    background-color: #dd7079;
+}
+
+.validation-item.warning {
+    background-color: #caca61;
+}
